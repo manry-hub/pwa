@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Simple Blog</title>
+     <link rel="manifest" href="manifest.json">
+     <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+     <header>
+          <h1>Welcome to My Blog</h1>
+     </header>
+     <main>
+          <article>
+               <h2>First Blog Post</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id condimentum libero.</p>
+          </article>
+          <article>
+               <h2>Another Interesting Post</h2>
+               <p>Proin vel urna nec orci tincidunt venenatis. Donec vitae felis a metus interdum scelerisque.</p>
+          </article>
+     </main>
+     <footer>
+          <p>&copy; 2025 My Blog. All rights reserved.</p>
+     </footer>
+
+     <script>
+          if ('serviceWorker' in navigator) {
+               navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+               }).catch(function (error) {
+                    console.log('ServiceWorker registration failed: ', error);
+               });
+          }
+     </script>
+</body>
+
+</html>
